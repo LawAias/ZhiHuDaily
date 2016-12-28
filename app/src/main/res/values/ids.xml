@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_parent_view" type="id" />
+    <item name="main_layout" type="id" />
+    <item name="main_content_frame" type="id" />
+    <item name="navigation_drawer" type="id" />
+    <item name="toolbar_actionbar" type="id" />
+    <item name="list_view" type="id" />
+</resources>

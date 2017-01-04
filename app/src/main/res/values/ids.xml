@@ -6,4 +6,11 @@
     <item name="navigation_drawer" type="id" />
     <item name="toolbar_actionbar" type="id" />
     <item name="list_view" type="id" />
+    <item name="drawer_item_layout" type="id" />
+    <item name="drawer_item_logo" type="id" />
+    <item name="drawer_item_title" type="id" />
+    <item name="drawer_item_remind" type="id" />
+    <item name="drawer_item_subscribe_button" type="id" />
+    <item name="main_view" type="id" />
+    <item name="navigation_view" type="id" />
 </resources>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ZhiHuDaily</string>
+    <string name="drawer_night">夜间</string>
 </resources>

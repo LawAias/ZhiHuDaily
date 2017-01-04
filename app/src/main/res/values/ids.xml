@@ -13,4 +13,13 @@
     <item name="drawer_item_subscribe_button" type="id" />
     <item name="main_view" type="id" />
     <item name="navigation_view" type="id" />
+    <item name="drawer_top" type="id" />
+    <item name="drawer_user" type="id" />
+    <item name="drawer_user_avatar" type="id" />
+    <item name="drawer_user_name" type="id" />
+    <item name="drawer_activity" type="id" />
+    <item name="drawer_favorite" type="id">drawer_favorite</item>
+    <item name="drawer_offline" type="id">drawer_offline</item>
+    <item name="drawer_offline_image" type="id">drawer_offline_image</item>
+    <item name="drawer_offline_progress" type="id">drawer_offline_progress</item>
 </resources>

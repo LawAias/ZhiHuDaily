@@ -1,5 +1,6 @@
 package com.charles.sihuan.zhihudaily.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +20,12 @@ import java.util.List;
 
 public class NavigationAdapter extends BaseAdapter {
 
-    List<ThemeRes.Theme> themes;
+
+    private List<ThemeRes.Theme> themes;
 
     @Override
     public int getCount() {
-        return themes == null ? 0 : themes.size();
+        return themes == null ? 1 : themes.size() + 1;
     }
 
     @Override
@@ -45,7 +47,6 @@ public class NavigationAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder;
-        ThemeRes.Theme theme = themes.get(i);
         if (view == null) {
             view = LayoutInflater.from(viewGroup.getContext())
                     .inflate(R.layout.item_navigation, viewGroup, false);
@@ -54,7 +55,20 @@ public class NavigationAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
-        viewHolder.title.setText(theme.getName());
+        switch (i) {
+            case 0:
+                viewHolder.logo.setVisibility(View.VISIBLE);
+                viewHolder.logo.setImageResource(R.drawable.menu_home);
+                viewHolder.title.setText("首页");
+                viewHolder.title.setTextColor(Color.parseColor("#00A2ED"));
+                break;
+            default:
+                ThemeRes.Theme theme = themes.get(i - 1);
+                viewHolder.logo.setVisibility(View.GONE);
+                viewHolder.title.setText(theme.getName());
+                viewHolder.title.setTextColor(Color.parseColor("#000000"));
+                break;
+        }
         return view;
     }
 
@@ -62,7 +76,7 @@ public class NavigationAdapter extends BaseAdapter {
         ImageView logo;
         TextView title;
 
-        public ViewHolder(View v) {
+        ViewHolder(View v) {
             logo = (ImageView) v.findViewById(R.id.drawer_item_logo);
             title = (TextView) v.findViewById(R.id.drawer_item_title);
         }

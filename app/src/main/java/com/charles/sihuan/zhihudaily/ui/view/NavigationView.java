@@ -2,6 +2,7 @@ package com.charles.sihuan.zhihudaily.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -23,6 +24,8 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
 
     @BindView(R.id.list_view)
     ListView listView;
+
+    View header;
 
 
     public NavigationView(Context context) {
@@ -48,6 +51,9 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
     protected void initView() {
         adapter = new NavigationAdapter();
         listView.setAdapter(adapter);
+        header = LayoutInflater.from(mContext).inflate(R.layout.navigation_header, null);
+        listView.addHeaderView(header);
+        listView.setItemChecked(1, true);
     }
 
     @Override

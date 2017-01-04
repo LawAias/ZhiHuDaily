@@ -6,7 +6,6 @@ import com.charles.sihuan.zhihudaily.model.bean.ThemeRes;
 import com.charles.sihuan.zhihudaily.model.net.RetrofitHelper;
 import com.charles.sihuan.zhihudaily.ui.view.NavigationView;
 import com.charles.sihuan.zhihudaily.utils.RxUtils;
-import com.elvishew.xlog.XLog;
 
 import rx.Subscription;
 import rx.functions.Action1;

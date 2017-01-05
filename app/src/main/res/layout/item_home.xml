@@ -14,7 +14,7 @@
     card_view:cardElevation="1.0dp">
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="72.0dip"
         android:orientation="vertical"
@@ -23,12 +23,12 @@
         android:paddingTop="12.0dip">
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14.0dip">
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_toLeftOf="@id/list_item_image_layout"
@@ -37,7 +37,7 @@
                 <!--<com.zhihu.daily.android.widget.DailyStatusTextView-->
                 <!--android:id="@id/list_item_title"-->
                 <!--style="@style/Daily.TextAppearance.List.Item.Title.Unread"-->
-                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content" />-->
 
                 <TextView
@@ -58,9 +58,9 @@
 
                 <ImageView
                     android:id="@id/list_item_image"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_marginLeft="8.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8.0dp"
                     android:scaleType="centerCrop" />
 
                 <ImageView
@@ -75,17 +75,17 @@
 
         <LinearLayout
             android:id="@id/list_item_extra"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="14.0dip">
 
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="@dimen/divider_height" />
 
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14.0dip"
                 android:gravity="center_vertical">

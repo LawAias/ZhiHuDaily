@@ -15,5 +15,6 @@ public class MainPresenter extends RxPresenter implements MainContract.Presenter
 
     public MainPresenter(MainView mainView) {
         mView = mainView;
+        mView.setPresenter(this);
     }
 }

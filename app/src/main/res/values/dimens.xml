@@ -3,4 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="navigation_drawer_width">304.0dip</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="list_item_image_width">90dp</dimen>
+    <dimen name="list_item_image_height">72dp</dimen>
 </resources>

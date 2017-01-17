@@ -31,4 +31,5 @@
     <item name="list_item_extra_text_choose_from" type="id"/>
     <item name="list_item_extra_text" type="id"/>
     <item name="list_item_image" type="id"/>
+    <item name="home_view" type="id"/>
 </resources>

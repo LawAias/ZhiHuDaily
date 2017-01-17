@@ -13,6 +13,8 @@ import com.charles.sihuan.zhihudaily.base.RootView;
 import com.charles.sihuan.zhihudaily.contract.NavigationContract;
 import com.charles.sihuan.zhihudaily.model.bean.ThemeRes;
 
+import java.util.List;
+
 import butterknife.BindView;
 
 /**
@@ -27,6 +29,9 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
 
     View header;
 
+    OnNavigationListener mListener;
+
+    List<ThemeRes.Theme> themes;
 
     public NavigationView(Context context) {
         super(context);
@@ -61,7 +66,7 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                mListener.changeInfo(themes.get(i - 2));
             }
         });
     }
@@ -77,7 +82,17 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
 
     @Override
     public void setThemesInfo(ThemeRes themeRes) {
-        adapter.setThemes(themeRes.getOthers());
+        themes = themeRes.getOthers();
+        adapter.setThemes(themes);
 
+    }
+
+    public void setListener(OnNavigationListener listener) {
+        mListener = listener;
+    }
+
+
+    public interface OnNavigationListener {
+        void changeInfo(ThemeRes.Theme theme);
     }
 }

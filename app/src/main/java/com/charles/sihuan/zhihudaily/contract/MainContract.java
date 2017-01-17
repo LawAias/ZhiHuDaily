@@ -12,6 +12,10 @@ public interface MainContract {
 
     interface View extends BaseView<Presenter> {
 
+        void setTitle(String title);
+
+        void closeNavigation();
+
     }
 
     interface Presenter extends BasePresenter {

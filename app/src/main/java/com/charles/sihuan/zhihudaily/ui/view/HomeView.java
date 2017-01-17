@@ -15,7 +15,7 @@ import butterknife.BindView;
  * com.charles.sihuan.zhihudaily.ui.view
  */
 
-public class HomeView extends RootView implements HomeContract.View {
+public class HomeView extends RootView<HomeContract.Presenter> implements HomeContract.View {
 
     @BindView(R.id.recyclerView)
     XRecyclerView recyclerView;
@@ -41,7 +41,7 @@ public class HomeView extends RootView implements HomeContract.View {
 
     @Override
     protected void getLayout() {
-        inflate(mContext, R.layout.fragment_home, this);
+        inflate(mContext, R.layout.home_view, this);
     }
 
     @Override

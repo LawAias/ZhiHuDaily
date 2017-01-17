@@ -71,4 +71,14 @@ public class MainView extends RootView<MainContract.Presenter> implements MainCo
     public void setPresenter(MainContract.Presenter presenter) {
 
     }
+
+    @Override
+    public void setTitle(String title) {
+        toolbar.setTitle(title);
+    }
+
+    @Override
+    public void closeNavigation() {
+        mDrawerLayout.closeDrawers();
+    }
 }

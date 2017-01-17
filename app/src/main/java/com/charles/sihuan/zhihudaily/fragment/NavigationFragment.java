@@ -19,18 +19,21 @@ public class NavigationFragment extends BaseFragment {
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
 
+
     @Override
     protected void initEvent() {
-
     }
 
     @Override
     protected void initView(LayoutInflater inflater) {
         mPresenter = new NavigationPresenter(navigationView);
+        navigationView.setListener((NavigationView.OnNavigationListener) getActivity());
     }
 
     @Override
     protected int getLayout() {
         return R.layout.fragment_navigation;
     }
+
+
 }

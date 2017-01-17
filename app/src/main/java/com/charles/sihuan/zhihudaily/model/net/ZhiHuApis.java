@@ -1,8 +1,10 @@
 package com.charles.sihuan.zhihudaily.model.net;
 
+import com.charles.sihuan.zhihudaily.model.bean.ThemeNews;
 import com.charles.sihuan.zhihudaily.model.bean.ThemeRes;
 
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import rx.Observable;
 
 /**
@@ -22,5 +24,10 @@ public interface ZhiHuApis {
     @GET("themes")
     Observable<ThemeRes> getThemeList();
 
+    @GET("news/latest")
+    Observable<ThemeNews> getNews();
+
+    @GET("theme/{themeId}")
+    Observable<ThemeNews> getThemeNews(@Path("themeId") String id);
 
 }

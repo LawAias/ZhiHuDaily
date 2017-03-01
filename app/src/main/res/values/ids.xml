@@ -32,4 +32,9 @@
     <item name="list_item_extra_text" type="id"/>
     <item name="list_item_image" type="id"/>
     <item name="home_view" type="id"/>
+    <item name="swipe_ly" type="id" />
+    <item name="item_title" type="id" />
+    <item name="item_icon" type="id" />
+    <item name="banner_icon" type="id" />
+    <item name="banner_title" type="id" />
 </resources>

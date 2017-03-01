@@ -24,10 +24,13 @@ public interface ZhiHuApis {
     @GET("themes")
     Observable<ThemeRes> getThemeList();
 
-    @GET("news/latest")
-    Observable<ThemeNews> getNews();
-
+    //    http://news-at.zhihu.com/api/4/theme/11
     @GET("theme/{themeId}")
-    Observable<ThemeNews> getThemeNews(@Path("themeId") String id);
+    Observable<ThemeNews> getThemeNews(@Path("themeId") int id);
+
+    @GET("news/latest")
+    Observable<ThemeNews> getMainPage();
+
+
 
 }

@@ -27,7 +27,11 @@ public class MainActivity extends BaseActivty implements NavigationView.OnNaviga
 
     @Override
     public void changeInfo(ThemeRes.Theme theme) {
-        mainView.setTitle(theme.getName());
-        mainView.closeNavigation();
+        mainView.changeTheme(theme);
+    }
+
+    @Override
+    public void changeMain() {
+        mainView.changeMain();
     }
 }

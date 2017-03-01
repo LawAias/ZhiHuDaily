@@ -66,7 +66,15 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mListener.changeInfo(themes.get(i - 2));
+                switch (i) {
+                    case 0:
+                        break;
+                    case 1:
+                        mListener.changeMain();
+                        break;
+                    default:
+                        mListener.changeInfo(themes.get(i - 2));
+                }
             }
         });
     }
@@ -94,5 +102,7 @@ public class NavigationView extends RootView<NavigationContract.Presenter> imple
 
     public interface OnNavigationListener {
         void changeInfo(ThemeRes.Theme theme);
+
+        void changeMain();
     }
 }
